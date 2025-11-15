@@ -34,7 +34,7 @@ importers:
         version: 1.7.1
     devDependencies:
       sass:
-        specifier: ^1.77.2
+        specifier: ^1.94.0
         version: 1.94.0
 
 packages:

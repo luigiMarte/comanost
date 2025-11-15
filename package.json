@@ -1,0 +1,27 @@
+{
+  "name": "nuxt-app",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.22.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "nuxt": "^3.11.2",
+    "vee-validate": "^4.12.8",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2",
+    "vue3-carousel-nuxt": "^1.1.1",
+    "yup": "^1.4.0"
+  },
+  "devDependencies": {
+    "sass": "^1.77.2"
+  }
+}

@@ -1,0 +1,112 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px !important; /* 1 rem = 16px */
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.tff") format("tff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1 {
+  font-size: clamp(2rem, 1.5vw + 2rem, 3rem); /* Ajusta entre 32px y 48px */
+}
+
+h2 {
+  font-size: clamp(
+    1.75rem,
+    1.25vw + 1.75rem,
+    2.5rem
+  ); /* Ajusta entre 28px y 40px */
+}
+
+h3 {
+  font-size: clamp(1.5rem, 1vw + 1.5rem, 2rem); /* Ajusta entre 24px y 32px */
+}
+
+h4 {
+  font-size: clamp(
+    1.25rem,
+    0.75vw + 1.25rem,
+    1.75rem
+  ); /* Ajusta entre 20px y 28px */
+}
+
+h5 {
+  font-size: clamp(1rem, 0.5vw + 1rem, 1.5rem); /* Ajusta entre 16px y 24px */
+}
+
+h6 {
+  font-size: clamp(
+    0.875rem,
+    0.5vw + 0.875rem,
+    1.25rem
+  ); /* Ajusta entre 14px y 20px */
+}
+
+p {
+  font-size: clamp(1rem, 0.5vw + 1rem, 1.125rem); /* Ajusta entre 16px y 18px */
+  margin-bottom: 1rem;
+}
+
+.nav-link,
+.button {
+  font-size: clamp(
+    0.875rem,
+    0.5vw + 0.875rem,
+    1rem
+  ); /* Ajusta entre 14px y 16px */
+}
+
+/* Contenedor principal */
+.container-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Grid de dos columnas */
+.two-columns-cont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .two-columns-cont {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Clases de utilidad para márgenes */
+.mt-50 {
+  margin-top: 3.125rem;
+}
+.mb-50 {
+  margin-bottom: 3.125rem;
+}
+.mt-100 {
+  margin-top: 6.25rem;
+}
+
+.mb-100 {
+  margin-bottom: 6.25rem;
+}
+
+/* clases utiles */
+
+.relative {
+  position: relative;
+}

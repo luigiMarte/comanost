@@ -1,63 +1,65 @@
 <template>
-  <div class="project-top-container">
-    <div class="return-link">
-      <NuxtLink to="/portfolio">
-        <ArrowLeft class="arrow-icon" /><span>Voltar</span></NuxtLink
-      >
+  <main>
+    <div class="project-top-container">
+      <div class="return-link">
+        <NuxtLink to="/portfolio">
+          <ArrowLeft class="arrow-icon" /><span>Voltar</span></NuxtLink
+        >
+      </div>
+      <div v-if="project">
+        <h1>{{ project.title }}</h1>
+        <h6>Lorem ipsum dolot</h6>
+        <ImageCarousel :images="project.carousel_images" />
+        <p>{{ project.text }}</p>
+      </div>
+      <div v-else>
+        <p>Proyecto no encontrado</p>
+      </div>
     </div>
-    <div v-if="project">
-      <h1>{{ project.title }}</h1>
-      <h6>Lorem ipsum dolot</h6>
-      <ImageCarousel :images="project.carousel_images" />
-      <p>{{ project.text }}</p>
+    <div class="middle-container">
+      <div class="two-columns">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
+          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
+          Pellentesque consequat lorem et orci pharetra, in luctus purus
+          ultrices. Donec odio diam, molestie a erat quis, egestas congue nunc.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
+          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
+          Pellentesque consequat lorem et orci pharetra, in luctus purus
+          ultrices. Donec odio diam, molestie a erat quis, egestas congue nunc.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
+          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
+          Pellentesque consequat lorem et orci pharetra, in luctus purus
+          ultrices. Donec odio diam, molestie a erat quis, egestas congue
+          nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
+          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
+          Pellentesque consequat lorem et orci pharetra, in luctus purus
+          ultrices. Donec odio diam, molestie a erat quis, egestas congue nunc.
+        </p>
+      </div>
+      <div class="image-text">
+        <img src="/images/projects/01/extra_img1.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
+          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
+          Pellentesque consequat lorem et orci pharetra, in luctus purus
+          ultrices. Donec odio diam, molestie a erat quis, egestas congue
+          nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
+          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
+          Pellentesque consequat lorem et orci pharetra, in luctus purus
+          ultrices. Donec odio diam, molestie a erat quis, egestas congue nunc.
+        </p>
+      </div>
     </div>
-    <div v-else>
-      <p>Proyecto no encontrado</p>
-    </div>
-  </div>
-  <div class="middle-container">
-    <div class="two-columns">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus
-        lacinia viverra. In elit dui, tempor a ipsum vitae, gravida tincidunt
-        nunc. Aenean iaculis erat nec metus rhoncus varius. Pellentesque
-        consequat lorem et orci pharetra, in luctus purus ultrices. Donec odio
-        diam, molestie a erat quis, egestas congue nunc. Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Integer maximus lacinia viverra. In
-        elit dui, tempor a ipsum vitae, gravida tincidunt nunc. Aenean iaculis
-        erat nec metus rhoncus varius. Pellentesque consequat lorem et orci
-        pharetra, in luctus purus ultrices. Donec odio diam, molestie a erat
-        quis, egestas congue nunc.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus
-        lacinia viverra. In elit dui, tempor a ipsum vitae, gravida tincidunt
-        nunc. Aenean iaculis erat nec metus rhoncus varius. Pellentesque
-        consequat lorem et orci pharetra, in luctus purus ultrices. Donec odio
-        diam, molestie a erat quis, egestas congue nunc.Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Integer maximus lacinia viverra. In
-        elit dui, tempor a ipsum vitae, gravida tincidunt nunc. Aenean iaculis
-        erat nec metus rhoncus varius. Pellentesque consequat lorem et orci
-        pharetra, in luctus purus ultrices. Donec odio diam, molestie a erat
-        quis, egestas congue nunc.
-      </p>
-    </div>
-    <div class="image-text">
-      <img src="/images/projects/01/extra_img1.jpg" alt="" />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer maximus
-        lacinia viverra. In elit dui, tempor a ipsum vitae, gravida tincidunt
-        nunc. Aenean iaculis erat nec metus rhoncus varius. Pellentesque
-        consequat lorem et orci pharetra, in luctus purus ultrices. Donec odio
-        diam, molestie a erat quis, egestas congue nunc.Lorem ipsum dolor sit
-        amet, consectetur adipiscing elit. Integer maximus lacinia viverra. In
-        elit dui, tempor a ipsum vitae, gravida tincidunt nunc. Aenean iaculis
-        erat nec metus rhoncus varius. Pellentesque consequat lorem et orci
-        pharetra, in luctus purus ultrices. Donec odio diam, molestie a erat
-        quis, egestas congue nunc.
-      </p>
-    </div>
-  </div>
+  </main>
 </template>
 
 <script setup>

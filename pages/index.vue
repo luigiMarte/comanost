@@ -3,7 +3,7 @@
     <div class="background-image-container">
       <img
         class="background-image"
-        src="/images/home-img.jpg"
+        src="/images/foto-capa-cor.jpg"
         alt="Background Image"
         ref="backgroundImage"
       />
@@ -12,7 +12,7 @@
     <div class="arrow-anchor"><a href="#wellcome"><span class="bounce-arrow"> &#8595</span></a></div>
     <section class="text-home-container">
       <h2 id="wellcome">Bem-vindo à COMANOST</h2>
-      <div class="two-columns-cont">
+      <div>
         <p>
           Fundada em 03 de abril de 2006, desde então a Comanost Engenharia e Construção Ltda., 
           vem atuando na elaboração de projeto legal para aprovação junto aos órgãos publicos

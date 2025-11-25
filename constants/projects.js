@@ -80,10 +80,20 @@ export const projects = reactive([
   },
   {
     id: 6,
-    mainImage: "https://picsum.photos/600/400",
-    title: "Obra 1",
+    mainImage: "/images/projects/06/mar-capa.jpg",
+    title: "Galeria 25 de Março",
     text: "Description of Project 6",
     tags: ["obra"],
+    carousel_images: [
+      { url: "/images/projects/06/mar-1.jpg" },
+      { url: "/images/projects/06/mar-2.jpg" },
+      { url: "/images/projects/06/mar-3.jpg" },
+      { url: "/images/projects/06/mar-4.jpg" },
+      { url: "/images/projects/06/mar-5.jpg" },
+      { url: "/images/projects/06/mar-6.jpg" },
+      { url: "/images/projects/06/mar-7.jpg" },
+      { url: "/images/projects/06/mar-8.jpg" },
+    ],
   },
 ]);
 

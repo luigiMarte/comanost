@@ -4,13 +4,12 @@ export default defineNuxtConfig({
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },
-  css: ["~/assets/css/normalize.css", "~/assets/css/main.css"],
+  css: ["~/assets/css/normalize.css", "~/assets/css/main.scss"],
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
           //api: "modern-compiler",
-          //additionalData: '@use "@/assets/styles/main.scss";',
           additionalData: '@use "@/assets/styles/setup" as *;',
         },
       },

@@ -8,7 +8,6 @@
           <img :src="link.img" alt="" />
           <h4>{{ link.title }}</h4>
         </div>
-        <p>{{ link.text }}</p>
         <a :href="link.external_link" class="button-link" target="_blank"
           >Abra o link</a
         >

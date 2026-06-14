@@ -8,7 +8,6 @@
       </div>
       <div v-if="project">
         <h1>{{ project.title }}</h1>
-        <h6>Lorem ipsum dolot</h6>
         <ImageCarousel :images="project.carousel_images" />
         <p>{{ project.text }}</p>
       </div>
@@ -16,61 +15,31 @@
         <p>Proyecto no encontrado</p>
       </div>
     </div>
-    <div class="middle-container">
-      <div class="two-columns">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
-          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
-          Pellentesque consequat lorem et orci pharetra, in luctus purus
-          ultrices. Donec odio diam, molestie a erat quis, egestas congue nunc.
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
-          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
-          Pellentesque consequat lorem et orci pharetra, in luctus purus
-          ultrices. Donec odio diam, molestie a erat quis, egestas congue nunc.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
-          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
-          Pellentesque consequat lorem et orci pharetra, in luctus purus
-          ultrices. Donec odio diam, molestie a erat quis, egestas congue
-          nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
-          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
-          Pellentesque consequat lorem et orci pharetra, in luctus purus
-          ultrices. Donec odio diam, molestie a erat quis, egestas congue nunc.
-        </p>
-      </div>
-      <div class="image-text">
-        <img src="/images/projects/01/extra_img1.jpg" alt="" />
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
-          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
-          Pellentesque consequat lorem et orci pharetra, in luctus purus
-          ultrices. Donec odio diam, molestie a erat quis, egestas congue
-          nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-          maximus lacinia viverra. In elit dui, tempor a ipsum vitae, gravida
-          tincidunt nunc. Aenean iaculis erat nec metus rhoncus varius.
-          Pellentesque consequat lorem et orci pharetra, in luctus purus
-          ultrices. Donec odio diam, molestie a erat quis, egestas congue nunc.
-        </p>
+    <div class="project-info-card">
+      <div
+        v-for="item in projectInfo"
+        :key="item.label"
+        class="project-info-card__row"
+      >
+        <span class="project-info-card__label">{{ item.label }}</span>
+        <p class="project-info-card__value">{{ item.value }}</p>
       </div>
     </div>
+
+    <div class="bottom-space"></div>
   </main>
 </template>
 
 <script setup>
 import { useRoute } from "vue-router";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 import { projects } from "~/constants/projects.js";
 import ArrowLeft from "~/components/icons/ArrowLeft.vue";
 
 const route = useRoute();
-const projectId = route.params.id;
-const project = ref(null);
+//const projectId = route.params.id;
+const projectId = Number(route.params.id);
+//const project = ref(null);
 const projectImages = ref([]);
 
 onMounted(() => {
@@ -78,6 +47,45 @@ onMounted(() => {
   if (project.value) {
     projectImages.value = project.value.carousel_images;
   }
+});
+
+const project = computed(() => projects.find((p) => p.id === projectId));
+
+const projectInfo = computed(() => {
+  if (!project.value) return [];
+
+  const fields = [
+    {
+      label: "Cliente",
+      value: project.value.client,
+    },
+    {
+      label: "Tipo de projeto",
+      value: project.value.projectType,
+    },
+    {
+      label: "Área construída",
+      value: project.value.builtArea,
+    },
+    {
+      label: "Área do terreno",
+      value: project.value.landArea,
+    },
+    {
+      label: "Áreas de aprovaçao",
+      value: project.value.approvedBy,
+    },
+    {
+      label: "Execução da obra",
+      value: project.value.constructionExecution,
+    },
+    {
+      label: "Soluções de engenharia e arquitectura específicas",
+      value: project.value.extraSolutions,
+    },
+  ];
+
+  return fields.filter((field) => field.value);
 });
 </script>
 
@@ -129,5 +137,54 @@ onMounted(() => {
   p {
     margin: toRem(50) 0;
   }
+}
+
+.project-info-card {
+  margin: toRem(40) auto 0;
+  padding: toRem(32);
+  max-width: toRem(900);
+  text-align: left;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+
+  &__row {
+    display: grid;
+    grid-template-columns: toRem(180) 1fr;
+    gap: toRem(24);
+    padding: toRem(16) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    color: $corporate-grey;
+  }
+
+  &__value {
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+.project-info-card__value {
+  white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+  .project-info-card {
+    padding: toRem(24);
+
+    &__row {
+      grid-template-columns: 1fr;
+      gap: toRem(8);
+    }
+  }
+}
+
+.bottom-space {
+  margin-bottom: toRem(150);
 }
 </style>

@@ -29,7 +29,7 @@ defineProps({
     type: String,
     required: false,
     default:
-      "Ligue para o número abaixo, envie-nos um email ou preencha o formulário à direita e entraremos em contato com você.",
+      "Ligue para o número abaixo, ou envie-nos um email e entraremos em contato com você.",
   },
   phone: {
     type: String,

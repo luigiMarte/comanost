@@ -2,21 +2,39 @@ html {
   scroll-behavior: smooth;
 }
 
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/InterVariable-Italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 body {
-  font-size: 16px !important; /* 1 rem = 16px */
-  font-family: "Roboto", sans-serif;
+  font-family: $font-stack;
+  font-size: $font-medium; // = 1rem = 16px
+  line-height: 1.5;
 }
 
 ul {
   list-style-type: none;
 }
 
-@font-face {
-  font-family: "Roboto";
-  src: url("/fonts/Roboto-Regular.tff") format("tff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2; // los titulares no necesitan tanto interlineado
 }
 
 h1 {

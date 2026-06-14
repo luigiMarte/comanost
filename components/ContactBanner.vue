@@ -2,9 +2,13 @@
   <div class="card-container">
     <div class="container-text">
       <h4>{{ title }}</h4>
-      <p class="contact-info">
+      <!-- <p class="contact-info">
         Ligue-nos para <span>932 18 66 22</span> ou escreva um email para
         <span>info@zestarchitecture.com</span>
+      </p> -->
+      <p class="contact-info">
+        Escreva um email para
+        <span>comanost@comanost.com.br</span>
       </p>
     </div>
   </div>

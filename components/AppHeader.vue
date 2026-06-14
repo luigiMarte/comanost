@@ -69,7 +69,7 @@ const isActive = (path) => {
 // Array de rutas de navegación
 const links = [
   { name: "Inicio", path: "/" },
-  { name: "Serviços", path: "/servicios" },
+  { name: "Política", path: "/politica" },
   { name: "Portfolio", path: "/portfolio" },
   { name: "Links", path: "/links" },
   { name: "Contato", path: "/contato" },

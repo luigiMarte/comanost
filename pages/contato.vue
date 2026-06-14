@@ -4,7 +4,7 @@
     <section class="container-main mt-100">
       <div class="two-columns-cont">
         <ContactCard phone="11 31050657" email="comanost@comanost.com.br" />
-        <ContactForm />
+        <!-- <ContactForm /> -->
       </div>
     </section>
   </div>

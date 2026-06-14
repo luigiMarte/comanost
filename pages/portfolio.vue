@@ -1,27 +1,40 @@
 <template>
   <CenteredContainer :maxWidth="1500">
     <template #content>
-      <div class="filters">
-        <span
-          v-for="filter in filters"
-          :key="filter"
-          @click="toggleFilter(filter)"
-          :class="{ active: activeFilters.includes(filter) }"
-        >
-          {{ filter }}
-        </span>
-      </div>
-      <div class="card-grid">
-        <div class="card" v-for="project in filteredProjects" :key="project.id">
-          <NuxtLink :to="`/projeto/${project.id}`" class="project-link">
-            <div class="relative">
-              <img :src="project.mainImage" alt="Card Image" class="card-img" />
-              <div class="overlay">Veja Projeto</div>
+      <div class="margin-bt">
+        <div class="filters">
+          <span
+            v-for="filter in filters"
+            :key="filter"
+            @click="toggleFilter(filter)"
+            :class="{ active: activeFilters.includes(filter) }"
+          >
+            {{ filter }}
+          </span>
+        </div>
+        <div class="card-grid">
+          <div
+            class="card"
+            v-for="project in filteredProjects"
+            :key="project.id"
+          >
+            <NuxtLink :to="`/projeto/${project.id}`" class="project-link">
+              <div class="relative">
+                <img
+                  :src="project.mainImage"
+                  alt="Card Image"
+                  class="card-img"
+                />
+                <div class="overlay">Veja Projeto</div>
+              </div>
+            </NuxtLink>
+            <div class="card-content">
+              <h2 class="card-title">{{ project.title }}</h2>
+              <CustomButton
+                text="Ver Projeto"
+                :link="`/projeto/${project.id}`"
+              />
             </div>
-          </NuxtLink>
-          <div class="card-content">
-            <h2 class="card-title">{{ project.title }}</h2>
-            <CustomButton text="Ver Projeto" :link="`/projeto/${project.id}`" />
           </div>
         </div>
       </div>
@@ -51,13 +64,21 @@ const filteredProjects = computed(() => {
     return projects.filter(
       (project) =>
         project.tags &&
-        activeFilters.some((filter) => project.tags.includes(filter))
+        activeFilters.some((filter) => project.tags.includes(filter)),
     );
   }
 });
 </script>
 
 <style scoped lang="scss">
+.margin-bt {
+  margin-bottom: toRem(80);
+}
+@include desktop-up {
+  .margin-bt {
+    margin-bottom: toRem(140);
+  }
+}
 .filters {
   display: flex;
   justify-content: flex-end;

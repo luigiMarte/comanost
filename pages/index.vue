@@ -14,55 +14,80 @@
       <h2 id="wellcome">Bem-vindo à COMANOST</h2>
       <div>
         <p>
-          Fundada em 03 de abril de 2006, desde então a Comanost Engenharia e Construção Ltda., 
-          vem atuando na elaboração de projeto legal para aprovação junto aos órgãos publicos
-          de edificações industriais, comerciais e residenciais na região da 
-          Grande São Paulo.
+          Fundada em 03 de abril de 2006, a Comanost Projeto Ltda., dedica-se à prestação de serviços
+          de desenvolvimento, elaboração e assessoria de trabalho técnico para aprovação de projeto
+          em todos os órgãos públicos afins na região do Município de São Paulo.
       </p>
       <p>
-        Dedica-se ainda à prestação de serviços de construção, reforma, manutenção e estruturação 
-        de edificações civis e comerciais, assistencia, assessoria, consultoria de trabalho técnico. 
-        Assessoria Jurìdica...
+        Ainda atuamos na elaboração de Projetos de Arquitetura de obra nova, reforma, manutenção,
+        restauro, e estruturação de edificações.
+      </p>
+      </div> 
+    </section>
+    <section class="text-home-container">
+      <h4>Assessoria Jurídica Especializada</h4>
+      <div>
+        <p>
+          A COMANOST também conta com equipe jurídica especializada, com ampla atuação em
+          processos administrativos e judiciais relacionados ao direito urbanístico, imobiliário e
+          regulatório.
+      </p>
+      <p>
+        Nossa atuação envolve o acompanhamento estratégico de procedimentos perante a Prefeitura
+        Municipal, incluindo demandas junto à SMUL, Subprefeituras e demais órgãos municipais, bem
+        como atuação especializada perante órgãos de preservação do patrimônio histórico e cultural,
+        como o CONPRESP e o CONDEPHAAT.
+      </p>
+      <p>A equipe jurídica presta assessoria completa em questões relacionadas a:</p>
+      <ul>
+        <li>aprovação e regularização de projetos;</li>
+        <li>processos administrativos municipais;</li>
+        <li>autos de infração, multas e embargos;</li>
+        <li>imóveis tombados e áreas de preservação;</li>
+        <li>transferência de potencial construtivo;</li>
+        <li>parcelamento, uso e ocupação do solo;</li>
+        <li>acompanhamento de licenciamentos e autorizações;</li>
+        <li>ações judiciais envolvendo a municipalidade e órgãos públicos.</li>
+      </ul>
+      <p>Além da atuação contenciosa e administrativa, a COMANOST realiza análise técnica e jurídica
+        da legislação aplicável a cada empreendimento, oferecendo suporte estratégico para tomada
+        de decisões, mitigação de riscos e viabilidade jurídica dos projetos.
+      </p>
+        
+      <p>
+        Nosso objetivo é proporcionar segurança jurídica, agilidade e soluções integradas, conciliando
+        os aspectos técnicos, arquitetônicos e legais de cada demanda.
       </p>
       </div>
-    </section>
+    </section> 
     <section class="main-projects">
       <h4>Principais Projetos</h4>
       <MainProjects></MainProjects>
     </section>
-    <section class="services">
-      <div class="text-img-cols">
-        <div>
-          <h4>Assessoria Completa e Acompanhamento Durante Todo o Processo</h4>
-          <p>
-            Entendemos que a jornada de construção pode ser complexa e desafiadora. 
-            Por isso, nossos especialistas estão sempre disponíveis para orientar e aconselhar em cada etapa do processo. 
-            Nosso compromisso é estar ao seu lado desde o planejamento inicial, passando pelo desenvolvimento do projeto, 
-            até a execução final, garantindo que todas as suas expectativas sejam atendidas com excelência.
-          </p>
-          <p>
-            A nossa equipe está preparada para gerenciar todos os aspectos do seu projeto, 
-            assegurando que cada detalhe seja cuidadosamente considerado e implementado. 
-            Oferecemos um acompanhamento contínuo, facilitando a comunicação entre todas as partes envolvidas e 
-            garantindo que os prazos sejam cumpridos e os custos sejam controlados de forma eficiente.
-          </p>
-        </div>
-        <div class="services-img">
-          <img src="/images/help.jpg" alt="opinions">
-        </div>
-      </div>
-    </section>
+
     <section class="testimonials">
-      <h4>O que nossos clientes dizem</h4>
-      <Testimonials />
+      <!-- <h4>O que nossos clientes dizem</h4> -->
+      <!-- <Testimonials /> -->
       <ContactBanner class="mt-50"/>
     </section>
+
     <section class="main-clients">
       <h4>Nossos clientes</h4>
-      <div class="carousel-cont">
-        <!-- <MiniCarousel /> -->
-      </div>
+      <ul class="clients-list">
+        <li>ROBELI</li>
+        <li>REDHOUSE</li>
+        <li>HOSPITAL ADVENTISTA</li>
+        <li>MATUSHITA</li>
+        <li>CASA DO RASPADOR</li>
+        <li>DIZ ARQUITETURA</li>
+        <li>MBIGUCCI CONSTRUTORA</li>
+        <li>ITAGUÁ ARQUITETURA E URBANISMO</li>
+      </ul>
+      <!-- <div class="carousel-cont">
+        <MiniCarousel /> 
+      </div> -->
     </section>
+
   </main>
 </template>
 
@@ -124,16 +149,13 @@
 .services, 
 .testimonials,
 .main-clients {
-  margin: 0 auto;
-  padding: toRem(25);
-  margin-top: toRem(50);
-  margin-bottom: toRem(50);
+  margin: toRem(50) auto;
+  padding: 0 toRem(25);
 
   @include tablet-portrait-up {
+    margin: toRem(80) auto;
+    padding: 0 toRem(50);
     max-width: toRem(1200);
-    padding: toRem(50);
-    margin-top: toRem(80);
-    margin-bottom: toRem(80);
   }
 
   .services-img img{
@@ -142,7 +164,21 @@
       width: unset;
     }
   }
-} 
+}
+
+.text-home-container ul {
+  list-style-type: disc;
+  padding-left: toRem(20);
+  margin: toRem(16) 0 toRem(24);
+
+  li {
+    margin-bottom: toRem(8);
+  }
+
+  li::marker {
+    color: $corporate-golden; // o $corporate-brown, el que encaje con la marca
+  }
+}
 
 // .carousel-cont {
 //   @include tablet-portrait-up {
@@ -150,6 +186,29 @@
 //     border: 1px solid red;
 //     }
 // }
+.main-clients {
+  text-align: center;
+
+  h4 {
+    margin-bottom: toRem(24);
+  }
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: toRem(16) toRem(32);
+  padding: 0;
+  margin: 0;
+
+  li {
+    color: $corporate-grey;
+    font-size: $font-medium;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+}
 
 .arrow-anchor {
   display: flex;

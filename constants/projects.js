@@ -6,7 +6,14 @@ export const projects = reactive([
     id: 1,
     mainImage: "/images/projects/01/main.jpg",
     title: "Red House International School",
-    text: "Lorem ipsum dolot sit amet",
+    client: "RedHouse",
+    text: "",
+    projectType:
+      "Desenvolvimento de Projeto de Arquitetura, Restauro, Instalações e compatibilização de projeto executivo com todas as disciplinas envolvidas.",
+    builtArea: "2.706,00m²",
+    approvedBy:
+      "SMUL (Secretaria Municipal de Urbanismo e Licenciamento),CONPRESP (Conselho Municipal de Preservação do Patrimônio Histórico, Cultural e Ambiental da Cidade de São Paulo), Corpo de Bombeiros do Estado de São Paulo.",
+    constructionExecution: "",
     tags: ["arquitecture"],
     carousel_images: [
       { url: "/images/projects/01/img1.jpg" },
@@ -23,7 +30,12 @@ export const projects = reactive([
     id: 2,
     mainImage: "/images/projects/02/gio-capa.jpg",
     title: "Edificio Vicente Giordano",
-    text: "Description of Project 2",
+    text: "",
+    projectType: "Desenvolvimento de projeto de adequação à acessibilidade",
+    builtArea: "2.400,00 m²",
+    approvedBy:
+      "CONDEPHAAT, CONPRESP, SMUL (Secretaria Municipal de Urbanismo e Licenciamento), Acessibilidade - Certificado de Acessibilidade.",
+    constructionExecution: "",
     tags: ["arquitecture", "legal"],
     carousel_images: [
       { url: "/images/projects/02/gio-ext1.jpg" },
@@ -39,7 +51,14 @@ export const projects = reactive([
     id: 3,
     mainImage: "images/projects/03/thumbnail.jpg",
     title: "Alagoas",
-    text: "Description of Project 3",
+    text: "",
+    client: "ROBELI PROCESSAMENTO DE DADOS LTDA",
+    projectType: "Projeto de Arquitetura de Imóvel comercial",
+    landArea: "143,00 m2",
+    builtArea: "190,00 m2",
+    approvedBy:
+      "CONDEPHAAT (Conselho de Defesa do Patrimônio Histórico,Arqueológico, Artístico e Turístico) e SMUL (Secretaria Municipal de Urbanismo e Licenciamento).",
+    constructionExecution: "Execução do Projeto de Reforma aprovado",
     tags: ["arquitecture", "legal", "obra"],
     carousel_images: [
       { url: "/images/projects/03/alg-3d4.jpg" },
@@ -54,9 +73,16 @@ export const projects = reactive([
   },
   {
     id: 4,
-    mainImage: "/images/projects/04/corte.jpg",
+    mainImage: "/images/projects/04/alb-capa.jpg",
     title: "Residencial A&T Artes",
-    text: "Description of Project 4",
+    text: "",
+    client: "A&T Incorporadora Imobiliária Ltda",
+    projectType:
+      "Desenvolvimento de Projeto de Arquitetura de Habitação de Interesse Social (HIS) e Aprovação de Projetos Legais.",
+    builtArea: "605,34 m2",
+    approvedBy:
+      "CONPRESP (Conselho Municipal de Preservação do Patrimônio Histórico, Cultural e Ambiental da Cidade de São Paulo), Corpo de Bombeiros do Estado de São Paulo e SMUL (Secretaria Municipal de Urbanismo e Licenciamento)",
+    constructionExecution: "Execução do Projeto aprovado",
     tags: ["legal"],
     carousel_images: [
       { url: "/images/projects/04/pla-terreo.jpg" },
@@ -69,7 +95,11 @@ export const projects = reactive([
     id: 5,
     mainImage: "/images/projects/05/let-capa.jpg",
     title: "Consultório Médico",
-    text: "Description of Project 5",
+    text: "",
+    projectType: "Desenvolvimento de projeto de interiores",
+    builtArea: "100,00 m²",
+    approvedBy: "",
+    constructionExecution: "",
     tags: ["legal"],
     carousel_images: [
       { url: "/images/projects/05/PLA-LA.jpg" },
@@ -82,7 +112,11 @@ export const projects = reactive([
     id: 6,
     mainImage: "/images/projects/06/mar-capa.jpg",
     title: "Galeria 25 de Março",
-    text: "Description of Project 6",
+    text: "",
+    projectType: "",
+    builtArea: "",
+    approvedBy: "",
+    constructionExecution: "",
     tags: ["obra"],
     carousel_images: [
       { url: "/images/projects/06/mar-1.jpg" },
@@ -99,7 +133,15 @@ export const projects = reactive([
     id: 7,
     mainImage: "/images/projects/07/hel-capa.jpg",
     title: "Residencial Maria Helena",
-    text: "Description of Project 7",
+    text: "",
+    client: "EMPREENDIMENTO PROPRIO",
+    projectType:
+      "Desenvolvimento de Projeto de Arquitetura de Habitação de Interesse Social (HIS) e Aprovação de Projetos Legais.",
+    builtArea: "5.200,00m2",
+    landArea: "1.100,00 m2",
+    approvedBy:
+      "Corpo de Bombeiros do Estado de São Paulo e SMUL(Secretaria Municipal de Urbanismo e Licenciamento).",
+    constructionExecution: "",
     tags: ["obra"],
     carousel_images: [
       { url: "/images/projects/07/hel-1.jpg" },
@@ -119,7 +161,12 @@ export const projects = reactive([
     id: 8,
     mainImage: "/images/projects/08/eli-capa.jpg",
     title: "Av. Elísio Teixeira Leite",
-    text: "Description of Project 8",
+    text: "",
+    projectType:
+      "Desenvolvimento de projeto de arquitetura e implantação de condomínio horizontal",
+    builtArea: "685,00 m2",
+    approvedBy: "SMUL (Secretaria Municipal de Urbanismo e Licenciamento)",
+    constructionExecution: "",
     tags: ["obra"],
     carousel_images: [
       { url: "/images/projects/08/eli-1.jpg" },
@@ -134,7 +181,16 @@ export const projects = reactive([
     id: 9,
     mainImage: "/images/projects/09/cak-capa.jpg",
     title: "Kherlakian",
-    text: "Description of Project 9",
+    text: "",
+    client: "",
+    projectType:
+      "Desenvolvimento de Projeto de Arquitetura de reforma e restauro de fachada tombada para Imóvel comercial",
+    builtArea: "396,00 m²",
+    approvedBy:
+      "CONDEPHAAT, CONPRESP, SMUL (Secretaria Municipal de Urbanismo e Licenciamento)",
+    constructionExecution: "Execução do Projeto de Reforma aprovado",
+    extraSolutions:
+      "Eliminação de um pilar frontal através de reforço estrutural, garantindo a manutenção integral da fachada original e a estabilidade do conjunto.\nEscoramento Provisório: Projeto de escoramento metálico para suporte total das cargas durante a intervenção.\nDetalhamento de viga de transição (em aço) que substituiu a função da coluna.\nEstrutura em alvenaria armada.",
     tags: ["obra"],
     carousel_images: [
       { url: "/images/projects/09/cak-1.jpg" },
